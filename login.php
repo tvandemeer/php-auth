@@ -36,7 +36,7 @@ require __DIR__ . '/src/login.php';
       </div>
 
       <div class="row">
-        <button class="waves-effect waves-light btn" type="submit">Log in</button>
+        <button class="waves-effect waves-light btn" type="submit">Log in<i class="material-icons right">send</i></button>
       </div>
       <div class="row">
           <a href="register.php">Register</a>

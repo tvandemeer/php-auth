@@ -58,7 +58,7 @@ require __DIR__ . '/src/register.php';
     </div>
 
     <div class="row">
-      <button class="waves-effect waves-light btn" type="submit">Register</button>
+      <button class="waves-effect waves-light btn" type="submit">Register<i class="material-icons right">send</i></button>
     </div>
 
     <div class="row">
