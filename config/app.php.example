@@ -1,0 +1,4 @@
+<?php
+
+const APP_URL = '';
+const SENDER_EMAIL_ADDRESS = '';
