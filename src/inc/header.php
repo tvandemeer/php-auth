@@ -9,7 +9,7 @@
     <title><?= $title ?? 'Home' ?></title>
 </head>
 <body>
-  <nav style="background-color:#cd2500;">
+  <nav style="background-color:#264653;">
     <div class="nav-wrapper">
       <a href="#!" class="brand-logo">&nbsp;/dev/null</a>
       <a href="#" data-target="mobile-nav" class="sidenav-trigger"><i class="material-icons">menu</i></a>

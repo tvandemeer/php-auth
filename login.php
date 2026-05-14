@@ -1,7 +1,7 @@
 <?php
 
-require __DIR__ . '/../src/bootstrap.php';
-require __DIR__ . '/../src/login.php';
+require __DIR__ . '/src/bootstrap.php';
+require __DIR__ . '/src/login.php';
 ?>
 
 <?php view('header', ['title' => 'Login']) ?>

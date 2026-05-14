@@ -2,10 +2,10 @@
 
 const FLASH = 'FLASH_MESSAGES';
 
-const FLASH_ERROR = 'error';
-const FLASH_WARNING = 'warning';
-const FLASH_INFO = 'info';
-const FLASH_SUCCESS = 'success';
+const FLASH_ERROR = 'red';
+const FLASH_WARNING = 'orange';
+const FLASH_INFO = 'blue';
+const FLASH_SUCCESS = 'green';
 
 /**
 * Create a flash message
@@ -34,7 +34,7 @@ function create_flash_message(string $name, string $message, string $type): void
 */
 function format_flash_message(array $flash_message): string
 {
-    return sprintf('<div class="card-panel alert-%s">%s</div>',
+    return sprintf('<div class="card-panel %s">%s</div>',
         $flash_message['type'],
         $flash_message['message']
     );
