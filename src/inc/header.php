@@ -17,10 +17,14 @@
       <a href="#" data-target="mobile-nav" class="sidenav-trigger"><i class="material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down">
         <li><a href="register.php">Register</a></li>
-        <li><a href="login.php">Login</a></li>
+        <?php
+        if (!is_user_logged_in()) { 
+          echo '<li><a href="login.php">Login</a></li>';
+        }
+        ?>
         <?php
         if (is_user_logged_in()) { 
-        echo '<li><a href="logout.php">Logout</a></li>';
+          echo '<li><a class="btn waves-effect waves-light orangebtn" href="logout.php">Logout</a></li>';
         }
         ?>
       </ul>
