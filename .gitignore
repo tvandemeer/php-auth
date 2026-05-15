@@ -1,4 +1,5 @@
 config/database.php
 public/mail.out
 config/app.php
+pw.txt
 

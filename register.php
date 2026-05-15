@@ -50,14 +50,6 @@ require __DIR__ . '/src/register.php';
     </div>
 
     <div class="row">
-      <div>
-        <p><label><input type="checkbox" name="agree" id="agree" />
-          <span>I agree with the&nbsp;<a href="" title="term of services">term of services</a></span></label></p>
-          <small><?= $errors['agree'] ?? '' ?></small>
-      </div>
-    </div>
-
-    <div class="row">
       <button class="waves-effect waves-light btn" type="submit">Register<i class="material-icons right">send</i></button>
     </div>
 

@@ -12,8 +12,7 @@ if (is_post_request()) {
         'username' => 'string | required | alphanumeric | between: 3, 25 | unique: users, username',
         'email' => 'email | required | email | unique: users, email',
         'password' => 'string | required | secure',
-        'password2' => 'string | required | same: password',
-        'agree' => 'string | required'
+        'password2' => 'string | required | same: password'
     ];
 
     // custom messages
@@ -21,9 +20,6 @@ if (is_post_request()) {
         'password2' => [
             'required' => 'Please enter the password again',
             'same' => 'The password does not match'
-        ],
-        'agree' => [
-            'required' => 'You need to agree to the term of services to register'
         ]
     ];
 

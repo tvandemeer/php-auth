@@ -21,7 +21,7 @@ function register_user(string $email, string $username, string $password, string
 
 function find_user_by_username(string $username)
 {
-    $sql = 'SELECT username, password, active, email
+    $sql = 'SELECT id, username, password, active, email
             FROM users
             WHERE username=:username';
 
