@@ -12,12 +12,15 @@ if (is_post_request()) {
 
     // if validation error
     if ($errors) {
-        redirect_with('login.php', [
+        redirect_with('guestbook.php', [
             'errors' => $errors,
             'inputs' => $inputs
         ]);
     }
 
     // if success
-    redirect_to('guestbook.php');
+    if (add_entry($inputs['message']))
+    {
+      redirect_to('guestbook.php');
+    }
 }
