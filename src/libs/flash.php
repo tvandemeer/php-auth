@@ -34,7 +34,7 @@ function create_flash_message(string $name, string $message, string $type): void
 */
 function format_flash_message(array $flash_message): string
 {
-    return sprintf('<div class="card-panel %s">%s</div>',
+    return sprintf('<div class="card-panel white-text %s">%s</div>',
         $flash_message['type'],
         $flash_message['message']
     );

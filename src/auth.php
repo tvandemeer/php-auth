@@ -1,6 +1,5 @@
 <?php
 
-
 function register_user(string $email, string $username, string $password, string $activation_code, int $expiry = 1 * 24  * 60 * 60, bool $is_admin = false): bool
 {
     $sql = 'INSERT INTO users(username, email, password, is_admin, activation_code, activation_expiry)
