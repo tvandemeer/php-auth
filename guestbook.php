@@ -12,7 +12,7 @@ require_login();
     </div>
     <div class="row">
       <div class="input-field">
-        <textarea id="entryarea" class="materialize-textarea" name="message"></textarea>
+        <textarea id="entryarea" class="materialize-textarea" name="message" value="<?= $inputs['message'] ?? '' ?>"></textarea>
         <label for="entryarea">Message</label>
       </div>
     </div>
