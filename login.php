@@ -39,7 +39,8 @@ require __DIR__ . '/src/login.php';
         <button class="waves-effect waves-light btn" type="submit">Log in<i class="material-icons right">send</i></button>
       </div>
       <div class="row">
-          <a href="register.php">Register</a>
+          <p style="margin-top: 50px;">Not yet registered?&nbsp;<a class="waves-effect waves-light btn-small" style="background-color: #4682b4;"
+            href="register.php">Register</a></p>
       </div>
 
   </form>

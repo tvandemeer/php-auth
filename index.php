@@ -7,8 +7,8 @@ require_login();
 <?php view('header', ['title' => 'Crib']) ?>
 <div class="row">
   <div class="col s12">
-    <div class="card-panel blue white-text center-align">
-      <h4>Welcome</h4><h3><?= current_user() ?></h3> 
+    <div class="center-align welcome-panel">
+      <h2 class="audiowide-regular">Welcome</h2><h1 class="audiowide-regular"><?= current_user() ?></h1> 
     </div>
   </div>
 </div>

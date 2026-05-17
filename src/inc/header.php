@@ -8,12 +8,16 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
     <title><?= $title ?? 'Home' ?></title>
 </head>
 <body>
   <nav id="topnav">
     <div class="nav-wrapper">
-      <a href="#!" class="brand-logo">&nbsp;/dev/null</a>
+      <a href="index.php" class="brand-logo">&nbsp;/dev/null</a>
       <a href="#" data-target="mobile-nav" class="sidenav-trigger"><i class="material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down">
         <?php
@@ -55,6 +59,6 @@
     ?>
   </ul>
   
-<div class="container">
+<div class="container animate__animated animate__fadeIn">
   
 <?php flash() ?>

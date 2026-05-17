@@ -1,3 +1,7 @@
+html {
+  background-color: lemonchiffon;
+}
+
 #topnav {
   background-color: #0f423d;
 }
@@ -13,3 +17,37 @@
   padding-left: 8px;
 }
 
+.marginy0 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.wrap {
+  display: flex;
+}
+
+.wrap small {
+  position: absolute;
+  align-self: flex-end;
+  bottom: 0.5rem;
+  right: 0.5rem; 
+}
+
+.card .ca-small-pad {
+  padding: 6px 10px;
+}
+
+.welcome-panel {
+  border-radius: 0.5rem;
+  padding: 0.5rem 0;
+  margin-top: 1rem;
+  color: #adadad;
+  background-color: #000000;
+  background-image: linear-gradient(147deg, #000000 0%, #434343 74%);
+}
+
+.audiowide-regular {
+  font-family: "Audiowide", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
