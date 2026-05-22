@@ -5,9 +5,9 @@ require __DIR__ . '/src/new_pass.php';
 
 <?php view('header', ['title' => 'Password reset']) ?>
 
-<?php if (isset($errors['password'])) : ?>
+<?php if (isset($errors['password2'])) : ?>
     <div class="card-panel red white-text">
-        <?= $errors['password'] ?>
+        <?= $errors['password2'] ?>
     </div>
 <?php endif ?>
 
@@ -20,15 +20,15 @@ require __DIR__ . '/src/new_pass.php';
 
       <div class="row">
         <div class="input-field">
-          <label for="new_pass">New password:</label>
-          <input type="password" class="validate" name="new_pass" id="new_pass" value="<?= $inputs['new_pass'] ?? '' ?>">
+          <label for="password">New password:</label>
+          <input type="password" class="validate" name="password" id="password" value="<?= $inputs['password'] ?? '' ?>">
         </div>
       </div>
 
       <div class="row">
         <div class="input-field">
-          <label for="new_pass_c">Confirm new password:</label>
-          <input type="password" class="validate" name="new_pass_c" id="new_pass_c" value="<?= $inputs['new_pass_c'] ?? '' ?>">
+          <label for="password2">Confirm new password:</label>
+          <input type="password" class="validate" name="password2" id="password2" value="<?= $inputs['password2'] ?? '' ?>">
         </div>
       </div>
 

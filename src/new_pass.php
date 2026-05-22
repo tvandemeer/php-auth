@@ -4,19 +4,18 @@ if (is_user_logged_in()) {
     redirect_to('index.php');
 }
 
-$inputs = [];
 $errors = [];
+$inputs = [];
 
 if (is_post_request()) {
-
     $fields = [
-        'new_pass' => 'string | required | secure',
-        'new_pass_c' => 'string | required | same: new_pass'
+        'password' => 'string | required | secure',
+        'password2' => 'string | required | same: password'
     ];
 
     // custom messages
     $messages = [
-        'new_pass_c' => [
+        'password2' => [
             'required' => 'Please enter the password again',
             'same' => 'The password does not match'
         ]
@@ -31,6 +30,10 @@ if (is_post_request()) {
         ]);
     }
 
-} else {
+    // if no errors: continue here
+    // if no errors: continue here
+    // if no errors: continue here
 
+} else if (is_get_request()) {
+    [$errors, $inputs] = session_flash('errors', 'inputs');
 }
