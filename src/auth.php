@@ -31,6 +31,19 @@ function find_user_by_username(string $username)
     return $statement->fetch(PDO::FETCH_ASSOC);
 }
 
+function find_user_by_email(string $email)
+{
+    $sql = 'SELECT id, username, password, active, email
+            FROM users
+            WHERE email=:email';
+
+    $statement = db()->prepare($sql);
+    $statement->bindValue(':email', $email);
+    $statement->execute();
+
+    return $statement->fetch(PDO::FETCH_ASSOC);
+}
+
 function is_user_active($user)
 {
     return (int)$user['active'] === 1;

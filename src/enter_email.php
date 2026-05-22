@@ -16,6 +16,16 @@ if (is_post_request()) {
     // sanitize & validate user inputs
     [$inputs, $errors] = filter($_POST, $fields);
 
+    $user = find_user_by_email($inputs['email']);
+
+    if (!$user) {
+      $errors['email'] = 'No such user';
+      redirect_with('enter_email.php', [
+          'errors' => $errors,
+          'inputs' => $inputs
+      ]);
+    }
+
     // if validation error
     if ($errors) {
         redirect_with('enter_email.php', [
