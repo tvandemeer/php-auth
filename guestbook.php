@@ -8,7 +8,7 @@ require_login();
 <div class="row">
   <form class="col s12 m10 offset-m1 l8 offset-l2" action="guestbook.php" method="post">
     <div class="row">
-      <h1>Guestbook</h1>
+      <h2>Guestbook</h2>
     </div>
     <div class="row">
       <div class="input-field">

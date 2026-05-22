@@ -10,7 +10,7 @@ require __DIR__ . '/src/register.php';
   <form class="col s12 m8 offset-m2 l6 offset-l3" action="register.php" method="post">
 
     <div class="row">
-      <h1>Register</h1>
+      <h2>Register</h2>
     </div>
 
     <div class="row">
@@ -74,8 +74,7 @@ require __DIR__ . '/src/register.php';
     </div>
 
     <div class="row">
-      <p style="margin-top: 50px;">Already a member?&nbsp;<a class="waves-effect waves-light btn-small" style="background-color: #4682b4;"
-        href="login.php">Log in</a></p>
+      <p style="margin-top: 50px;">Already a member?&nbsp;<a href="login.php">Log in</a></p>
     </div>
 
   </form>
