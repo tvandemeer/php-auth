@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Connect to the database and returns an instance of PDO class
  * or false if the connection fails
@@ -23,5 +22,3 @@ function db(): PDO
     return $pdo;
 }
 
-// FOR DEBUGGING!!!
-db();

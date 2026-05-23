@@ -33,6 +33,7 @@ if (is_post_request()) {
             'inputs' => $inputs
         ]);
     } else {
+      $_SESSION['email'] = $inputs['email'];
       redirect_with('new_pass.php', [
           'errors' => $errors,
           'inputs' => $inputs

@@ -5,10 +5,7 @@ if (is_user_logged_in()) {
 }
 
 $errors = [];
-
-if (!isset($inputs)) {
-  $inputs = [];
-}
+$inputs = [];
 
 if (is_post_request()) {
     $fields = [
@@ -35,9 +32,17 @@ if (is_post_request()) {
 
     $token = bin2hex(random_bytes(50));
 
+    $email = $_SESSION['email'];
+
     $sql = "INSERT INTO password_resets (email, token) VALUES (?,?)";
-    $stmt = $pdo->prepare($sql);
-    $stmt->execute([$email, $token]);
+    $stmt = db()->prepare($sql);
+    if (!$stmt->execute([$email, $token]))
+    {
+      // ER GING IETS MIS
+      // REDIRECT
+    };
+
+    $_SESSION['email'] = '';
 
     // if no errors: continue here
     // if no errors: continue here
