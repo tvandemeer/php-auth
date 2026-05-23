@@ -33,11 +33,19 @@ if (is_post_request()) {
             'inputs' => $inputs
         ]);
     } else {
-      $_SESSION['email'] = $inputs['email'];
-      redirect_with('new_pass.php', [
-          'errors' => $errors,
-          'inputs' => $inputs
-      ]);
+      $token = bin2hex(random_bytes(50));
+
+      $sql = "INSERT INTO password_resets (email, token) VALUES (?,?)";
+      $stmt = db()->prepare($sql);
+      if (!$stmt->execute([$inputs['email'], $token]))
+      {
+        // ER GING IETS MIS
+        // REDIRECT
+      }
+
+      send_pass_reset_email($inputs['email'], $token);
+
+      redirect_to('login.php');
     }
 
 } else if (is_get_request()) {

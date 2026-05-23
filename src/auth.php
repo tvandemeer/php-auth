@@ -126,19 +126,16 @@ function send_activation_email(string $email, string $activation_code): void
 
 }
 
-function send_pass_reset_email(string $email): void
+function send_pass_reset_email(string $email, string $token): void
 {
-  $subject = '';
-  $message = <<<MESSAGE
-          Hi,
-          Body text,
-          of email
-          MESSAGE;
+  $subject = 'Reset your password';
+  $msg = "Hi there, click on this <a href=\"new_password.php?token=" . $token . "\">link</a> to reset your password on our site";
+  $msg = wordwrap($msg,70);
   // email header
   $header = "From:" . SENDER_EMAIL_ADDRESS;
 
   // send mail
-  mail($email, $subject, $message, $header);
+  mail($email, $subject, $msg, $header);
 }
 
 function delete_user_by_id(int $id, int $active = 0)
