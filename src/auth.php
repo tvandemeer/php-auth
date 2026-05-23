@@ -126,6 +126,21 @@ function send_activation_email(string $email, string $activation_code): void
 
 }
 
+function send_pass_reset_email(string $email): void
+{
+  $subject = '';
+  $message = <<<MESSAGE
+          Hi,
+          Body text,
+          of email
+          MESSAGE;
+  // email header
+  $header = "From:" . SENDER_EMAIL_ADDRESS;
+
+  // send mail
+  mail($email, $subject, $message, $header);
+}
+
 function delete_user_by_id(int $id, int $active = 0)
 {
     $sql = 'DELETE FROM users

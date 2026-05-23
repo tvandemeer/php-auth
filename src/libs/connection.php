@@ -22,3 +22,6 @@ function db(): PDO
     
     return $pdo;
 }
+
+// FOR DEBUGGING!!!
+db();

@@ -21,14 +21,14 @@ require __DIR__ . '/src/new_pass.php';
       <div class="row">
         <div class="input-field">
           <label for="password">New password:</label>
-          <input type="password" class="validate" name="password" id="password" value="<?= $inputs['password'] ?? '' ?>">
+          <input type="password" class="validate" name="password" id="password" value="<?= $inputs['password'] ?? '' ?>" required>
         </div>
       </div>
 
       <div class="row">
         <div class="input-field">
           <label for="password2">Confirm new password:</label>
-          <input type="password" class="validate" name="password2" id="password2" value="<?= $inputs['password2'] ?? '' ?>">
+          <input type="password" class="validate" name="password2" id="password2" value="<?= $inputs['password2'] ?? '' ?>" required>
         </div>
       </div>
 

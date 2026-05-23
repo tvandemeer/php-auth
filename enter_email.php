@@ -21,7 +21,7 @@ require __DIR__ . '/src/enter_email.php';
       <div class="row">
         <div class="input-field">
           <label for="email">Email:</label>
-          <input type="text" class="validate" name="email" id="email" value="<?= $inputs['email'] ?? '' ?>">
+          <input type="text" class="validate" name="email" id="email" value="<?= $inputs['email'] ?? '' ?>" required>
         </div>
       </div>
 
