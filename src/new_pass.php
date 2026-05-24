@@ -30,7 +30,22 @@ if (is_post_request()) {
         ]);
     }
 
-    // if no errors: continue here
+    $token = $_GET['token'];
+
+    $email = find_email_by_token($token);
+
+    if (!$email) {
+      // email not found in reset table
+      redirect_to('register.php');
+    }
+
+    $new_pass = password_hash($inputs['password'], PASSWORD_BCRYPT);
+
+    if (!update_pass($new_pass, $email)) {
+      // update failed
+      redirect_to('register.php');
+    }
+
     // if no errors: continue here
     // if no errors: continue here
 

@@ -129,7 +129,7 @@ function send_activation_email(string $email, string $activation_code): void
 function send_pass_reset_email(string $email, string $token): void
 {
   $subject = 'Reset your password';
-  $msg = 'Hi there, click on this <a href="' . APP_URL . '/new_password.php?token=' . $token . '">link</a> to reset your password on our site';
+  $msg = 'Hi there, click on this <a href="' . APP_URL . '/new_pass.php?token=' . $token . '">link</a> to reset your password on our site';
   $msg = wordwrap($msg,70);
   // email header
   $header = "From:" . SENDER_EMAIL_ADDRESS;
@@ -191,3 +191,26 @@ function activate_user(int $user_id): bool
 
     return $statement->execute();
 }
+
+function find_email_by_token(string $token)
+{
+  $sql = 'SELECT email from password_resets
+          WHERE token=:token
+          LIMIT 1';
+
+  $stmt = db()->prepare($sql);
+  $stmt->execute(['token' => $token]);
+
+  return $stmt->fetch();
+}
+
+function update_pass(string $new_pass, string $email): bool
+{
+  $sql = 'UPDATE users
+          SET password=:password
+          WHERE email=:email';
+
+  $stmt = db()->prepare($sql);
+  return $stmt->execute(['password' => $new_pass, 'email' => $email]);
+}
+

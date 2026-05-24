@@ -45,7 +45,7 @@ if (is_post_request()) {
 
       send_pass_reset_email($inputs['email'], $token);
 
-      redirect_to('login.php');
+      redirect_with_message('login.php', 'Check your email inbox', FLASH_INFO);
     }
 
 } else if (is_get_request()) {
